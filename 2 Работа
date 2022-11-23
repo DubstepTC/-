@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(0, "");
+    int a;
+    cin >> a;
+    if (a == 1) {
+        cout << "Лето, наденьте солнечные очки" ;
+    }
+    else if (a == 2) {
+        cout << "Осень, возьмите с собой зонтик";
+    }
+    else if (a == 3) {
+        cout << "Зима, обязательно наденьте шапку";
+    }
+    else if (a == 4) {
+        cout << "Весна, радуйся жизни";
+    }
+    else 
+    {
+        cout << "Такого времени года нет";
+    }
+    int _;
+    cin >>  _;
+}

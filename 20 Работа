@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+	int arrFive[5];
+	int count = 1;
+	string RED = "\x1b[91m";
+	string White = "\x1b[97m";
+	cout << "Введите элементы массива:\n";
+	for (int i = 0; i < 5; i++) {
+		cout << count << ".";
+		cin >> arrFive[i];
+		count++;
+	}
+	for (int j = 1; j < 6; j++) {
+		cout << "| Таблица: " << RED << j << White << "\n";
+		for (int k = 0; k < 63; k++) {
+			cout << "-";
+		}
+		cout << "\n";
+		cout << "|    Число    |            Пример          |     Результат     |\n";
+		for (int k = 0; k < 63; k++) {
+			cout << "-";
+		}
+		cout << "\n";
+		cout << "|      " << arrFive[j - 1] << "      |" << "             " << arrFive[j - 1]<< RED << "+" << White << arrFive[j - 1] << "            " << "|        " << arrFive[j - 1] + arrFive[j - 1] << "         |\n";
+		for (int k = 0; k < 63; k++) {
+			cout << "-";
+		}
+		cout << "\n";
+		cout << "|      " << arrFive[j - 1] << "      |" << "             " << arrFive[j - 1] << RED << "-" << White<< arrFive[j - 1] << "            " << "|         " << arrFive[j - 1] - arrFive[j - 1] << "         |\n";
+		for (int k = 0; k < 63; k++) {
+			cout << "-";
+		}
+		cout << "\n";
+		cout << "|      " << arrFive[j - 1] << "      |" << "             " << arrFive[j - 1] << RED << "/" << White << arrFive[j - 1] << "            " << "|         " << arrFive[j - 1] / arrFive[j - 1] << "         |\n";
+		for (int k = 0; k < 63; k++) {
+			cout << "-";
+		}
+		cout << "\n";
+		cout << "|      " << arrFive[j - 1] << "      |" << "             " << arrFive[j - 1] << RED << "*" << White << arrFive[j - 1] << "            " << "|        " << arrFive[j - 1] * arrFive[j - 1] << "         |\n";
+		for (int k = 0; k < 63; k++) {
+			cout << "-";
+		}
+		cout << "\n\n";
+
+	}
+	return 0;
+}

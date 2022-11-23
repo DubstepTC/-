@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+	int a;
+	int i = 1;
+	cout << "Введите число(от 1 до 15): ";
+	cin >> a;
+	if (1 <= a and a <= 15) {
+		while (i <= a) {
+			cout << "\nЦикл отработал.Круг: " << i << "\n";
+			i++;
+		}
+	}
+	else {
+		cout << "Вы ввели число невходящее в диапозон\n";
+	}
+	system("pause");
+	return 0;
+}

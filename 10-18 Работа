@@ -1,0 +1,369 @@
+
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+
+
+int main()
+{
+	setlocale(0, "");
+	int key;
+	int key2;
+	int dl, sh;
+	char tx;
+	while (true) {
+		cout << "Геометрические фигуры" << "\n" << "\n";
+		cout << "1.Линия" << "\n";
+		cout << "2.Треугольник" << "\n";
+		cout << "3.Квадрат" << "\n";
+		cout << "4.Прямоугольник" << "\n";
+		cout << "5.Решетка" << "\n";
+		cout << "6.Крестик" << "\n";
+		cout << "7.Плюс" << "\n";
+		cout << "8.Ромб" << "\n";
+		cout << "9.Выход" << "\n";
+		key = _getch();
+		system("cls");
+		if (key == 49) {
+			cout << "Фигура: Линия " << "\n" << "\n";
+			cout << "1.Горизонтальная " << "\n";
+			cout << "2.Вертикальная " << "\n";
+			key2 = _getch();
+			system("cls");
+			if (key2 == 49) {
+				cout << "Введите длину линии: " << "\n";
+				cin >> dl;
+				cout << "Введите текстуру линии: " << "\n";
+				cin >> tx;
+				system("cls");
+				for (int i = 0; i < dl; i++) {
+					cout << tx << " ";
+				}
+				cout << "\n";
+				system("pause");
+				system("cls");
+			}
+			else if (key2 == 50) {
+				cout << "Введите длину линии: " << "\n";
+				cin >> dl;
+				cout << "Введите текстуру линии: " << "\n";
+				cin >> tx;
+				system("cls");
+				for (int i = 0; i < dl; i++) {
+					cout << " " << tx << "\n";
+				}
+				cout << "\n";
+				system("pause");
+				system("cls");
+			}
+
+		}
+		else if (key == 51) {
+			cout << "Фигура: Квадрат " << "\n" << "\n";
+			cout << "1.Заполненный " << "\n";
+			cout << "2.Пустой " << "\n";
+
+			key2 = _getch();
+			system("cls");
+
+			if (key2 == 49){
+			cout << "Введите длину стороны квадрата: " << "\n";
+			cin >> dl;
+			cout << "Введите текстуру квадрата: " << "\n";
+			cin >> tx;
+			system("cls");
+			for (int i = 0; i < dl; i++){
+			for (int p = 0; p < dl; p++) {
+				cout << tx << " ";
+			}
+			cout << "\n";
+			}
+			cout << "\n";
+			system("pause");
+			system("cls");
+			}
+			else if (key2 == 50) {
+				cout << "Введите длину стороны квадрата: " << "\n";
+				cin >> dl;
+				cout << "Введите текстуру квадрата: " << "\n";
+				cin >> tx;
+
+				system("cls");
+
+				for (int i = 0; i < dl; i++) {
+					if (i == 0 or i == dl - 1) {
+						for (int r = 0; r < dl; r++) {
+							cout << tx << " ";
+
+						}
+						cout << "\n";
+					}
+					else if (i > 0 and i < dl ){
+						cout << tx;
+						for (int k = 0; k < dl * 2 - 3; k++) {
+
+						cout << " ";
+						}
+						
+						cout << tx << "\n";
+					}
+				}
+				cout << "\n";
+				system("pause");
+				system("cls");
+			}
+		}
+		else if (key == 50) {
+			cout << "Фигура: Треугольник " << "\n" << "\n";
+			cout << "1.Заполненный " << "\n";
+			cout << "2.Пустой " << "\n";
+
+			key2 = _getch();
+			system("cls");
+
+			if (key2 == 49) {
+				cout << "Введите высоту треугольника: " << "\n";
+				cin >> dl;
+				cout << "Введите символ треугольника: " << "\n";
+				cin >> tx;
+				int i = dl;
+				system("cls");
+				for (int i = 0; i < dl; i++)
+				{
+					for (int j = 1; j < dl - i; j++)
+					{
+						cout << ' ';
+					}
+					for (int j = dl - 2 * i; j <= dl; j++)
+					{
+						cout << tx;
+					}
+					cout << endl;
+				}
+				system("pause");
+				system("cls");
+			}
+			if (key2 == 50) {
+				cout << "Введите высоту треугольника: " << "\n";
+				cin >> dl;
+				cout << "Введите символ треугольника: " << "\n";
+				cin >> tx;
+				int i = dl;
+				system("cls");
+				for (int i = 0; i < dl; i++)
+				{
+					for (int j = 1; j < dl - i; j++)
+					{
+						cout << ' ';
+					}
+					for (int j = dl - 2 * i; j <= dl; j++) {
+					if(i == 0 or i == dl-1){
+						cout << tx;
+					}
+					else if (i > 0 and i < dl - 1) {
+						if (j == dl or j == dl - i*2){
+						cout << tx;
+						}
+						else {
+							cout << ' ';
+						}
+					}
+					}
+					cout << endl;
+				}
+				system("pause");
+				system("cls");
+			}
+		}
+		else if (key == 52) {
+			cout << "Фигура: Прямоугольник " << "\n" << "\n";
+			cout << "1.Заполненный " << "\n";
+			cout << "2.Пустой " << "\n";
+			key2 = _getch();
+			system("cls");
+			if (key2 == 49) {
+				cout << "Введите длину прямоугольника: " << "\n";
+				cin >> dl;
+				cout << "Введите ширину прямоугольника: " << "\n";
+				cin >> sh;
+				cout << "Введите текстуру прямоугольника: " << "\n";
+				cin >> tx;
+				system("cls");
+				for (int i = 0; i < sh; i++) {
+					for (int i = 0; i < dl; i++) {
+						cout << tx << " ";
+					}
+					cout << "\n";
+				}
+
+				cout << "\n";
+				system("pause");
+				system("cls");
+			}
+			else if (key2 == 50) {
+				cout << "Введите длину прямоугольника: " << "\n";
+				cin >> dl;
+				cout << "Введите ширину прямоугольника: " << "\n";
+				cin >> sh;
+				cout << "Введите текстуру прямоугольника: " << "\n";
+				cin >> tx;
+				system("cls");
+				for (int i = 0; i < sh; i++) {
+					if (i == 0 or i == sh - 1) {
+						for (int r = 0; r < dl; r++) {
+							cout << tx << " ";
+
+						}
+						cout << "\n";
+					}
+					else if (i > 0 and i < sh - 1) {
+						cout << tx;
+						for (int k = 0; k < dl * 2 - 3; k++) {
+
+							cout << " ";
+						}
+
+						cout << tx << "\n";
+					}
+				}
+				cout << "\n";
+				system("pause");
+				system("cls");
+
+			}
+		}
+		else if (key == 57) {
+			return 0;
+		}
+			else if (key == 53) {
+				cout << "Введите размер решетки: " << "\n";
+				cin >> dl;
+				cout << "Введите текстуру решетки: " << "\n";
+				cin >> tx;
+			system("cls");
+
+			for (int i = 0; i < dl; i++) {
+				if (i % 2 == 0){
+					for (int p = 0; p < dl / 2; p++) {
+						cout << "  " << tx << " ";
+					}
+					cout << "\n";
+				}
+				else if (i % 2 != 0) {
+					if (dl % 2 == 0){
+						for (int p = 0; p < dl / 2; p++) {
+							cout << tx << " " << tx << " ";
+						}
+						cout << "\n";
+					}
+					else {
+						for (int p = 0; p < dl / 2; p++) {
+							cout << tx << " " << tx << " ";
+						}
+						cout << tx;
+						cout << "\n";					
+					}
+				}
+			}
+
+			cout << "\n";
+			system("pause");
+			system("cls");
+			}
+
+			else if (key == 54) {
+				cout << "Введите размер креста: " << "\n";
+				cin >> dl;
+				cout << "Введите текстуру креста: " << "\n";
+				cin >> tx;
+				system("cls");
+				for (int i = 0; i < dl; i++) {
+					for (int p = 0;  p < dl; p++) {
+						if (p == i or p == dl - i - 1) {
+							cout << tx;
+						}
+						else {
+							cout << " ";
+						}
+					}
+					cout << "\n";
+				}
+				cout << "\n";
+				system("pause");
+				system("cls");
+				}
+
+			else if (key == 55) {
+			cout << "Введите размер плюса: " << "\n";
+			cin >> dl;
+			cout << "Введите текстуру плюса: " << "\n";
+			cin >> tx;
+			system("cls");
+			for (int i = 0; i < dl; i++) {
+				if ( i != dl/2){
+					for (int p = 0; p < dl; p++) {
+						if (dl %2 != 0){
+							if (p == dl - 1) {
+								cout << tx;
+							}
+							else {
+								cout << " ";
+							}
+						}
+						else {
+							if (p == dl - 2) {
+								cout << tx;
+							}
+							else {
+								cout << " ";
+							}
+						}
+					}
+				}
+				else {
+					for (int p = 0; p < dl; p++) {
+						cout  << tx << " ";
+					}
+				}
+				cout << "\n";
+			}
+			cout << "\n";
+			system("pause");
+			system("cls");
+				}
+		else if (key == 56) {
+			
+		cout << "Введите размер ромба: " << "\n";
+		cin >> dl;
+		cout << "Введите текстуру ромба: " << "\n";
+		cin >> tx;
+		system("cls");
+		for (int i = 0; i < dl; i++) {
+			for (int j = 0; j < dl; j++) {
+				if (i + dl / 2 == j || i - dl / 2 == j || i == dl / 2 - j || i == dl / 2 + dl - j - 1)
+				{
+					cout << tx;
+				}
+				else
+				{
+					cout << " ";
+				}
+			}
+			cout << "\n";
+		
+		
+		
+		}
+		cout << "\n";
+		system("pause");
+		system("cls");
+				
+		}
+
+	}	  
+	
+	return 0;
+}
+

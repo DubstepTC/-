@@ -1,0 +1,600 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main() {
+
+	setlocale(0, "");
+
+	cout << "Добро пожаловать на викторину" << endl << endl;
+
+	system("pause");
+	system("cls");
+
+	string quest = "\x1b[97m";
+	string menu = "\x1b[97m";
+	string answer = "\x1b[97m";
+	string user = "user";
+
+
+	int c = 8;
+
+	while (true) {
+		
+		cout << menu << "Игрок: " << user << endl << endl;
+		cout  << "    Меню" << endl << endl;
+
+		cout << "1 Начать игру" << endl;
+		cout << "2 Настройки" << endl;
+		cout << "3 Правила" << endl;
+		cout << "4 Выход" << endl << endl;
+
+		int key;
+		key = _getch();
+
+		system("cls");
+
+		if (key == 49) {
+			int live = 3;
+			int chet = 0;
+			string otvet;
+
+			while (live > 1) {
+
+				cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+				cout << quest << "[ 1 ] Вопрос: Системный язык программирования?" << endl << endl;
+				cout << "[ A ] Python" << "  [ B ] С#" << endl << "[ C ] Ruby" << "    [ D ] C++" << endl << endl;
+
+				cout << answer << "[ + ] Выбрать ответ:" << otvet;
+				cin >> otvet;
+
+				if (otvet == "D" or otvet == "d") {
+					chet++;
+					cout << endl << "Вы ответили правильно" << endl;
+				}
+				else {
+					live = live - 1;
+					cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+				}
+				otvet = "";
+
+				system("pause");
+				system("cls");
+
+				cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+				cout << quest << "[ 2 ] Вопрос: Перевод программ с языка высокого уровня на язык более низкого уровня обеспечивает программа:" << endl << endl;
+				cout << "[ A ] Ассемблер" << "  [ B ] Компилятор" << endl << "[ C ] Паскаль" << "    [ D ] Интерпретатор" << endl << endl;
+
+				cout << answer << "[ + ] Выбрать ответ:" << otvet;
+				cin >> otvet;
+
+				if (otvet == "A" or otvet == "a") {
+					chet++;
+					cout << endl << "Вы ответили правильно" << endl;
+				}
+				else {
+					live = live - 1;
+					cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+				}
+				otvet = "";
+
+				system("pause");
+				system("cls");
+
+				cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+				cout << quest << "[ 3 ] Вопрос: Языком высокого уровня является:" << endl << endl;
+				cout << "[ A ] Ассемблер" << "  [ B ] Фортран" << endl << "[ C ] Паскаль" << "    [ D ] Макроассемблер" << endl << endl;
+
+				cout << answer << "[ + ] Выбрать ответ:" << otvet;
+				cin >> otvet;
+
+				if (otvet == "B" or otvet == "b") {
+					chet++;
+					cout << endl << "Вы ответили правильно" << endl;
+				}
+				else {
+					live = live - 1;
+					cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+
+				}
+				otvet = "";
+
+				system("pause");
+				system("cls");
+
+				if (live == 0) {
+					system("cls");
+					cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+					system("pause");
+					system("cls");
+					break;
+				}
+
+				cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+				cout << quest << "[ 4 ] Вопрос: Как называется алгоритм, в котором действия выполняются друг за другом, не повторяясь? " << endl << endl;
+				cout << "[ A ] Линейным" << "      [ B ] Циклическим" << endl << "[ C ] Разветвленным" << " [ D ] Хз короче гг" << endl << endl;
+
+				cout << answer << "[ + ] Выбрать ответ:" << otvet;
+				cin >> otvet;
+
+				if (otvet == "A" or otvet == "a") {
+					chet++;
+					cout << endl << "Вы ответили правильно" << endl;
+				}
+				else {
+					live = live - 1;
+					cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+				}
+				otvet = "";
+
+				system("pause");
+				system("cls");
+
+				if (live == 0) {
+					system("cls");
+					cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+					system("pause");
+					system("cls");
+					break;
+				}
+
+				cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+				cout << quest << "[ 5 ] Вопрос: В операторе присваивания summa := sqr(x)+3*a переменными являются: " << endl << endl;
+				cout << "[ A ] sqr,x,a" << "  [ B ] summa, sqr, x, a" << endl << "[ C ] Их нет" << "   [ D ] a, x, summa" << endl << endl;
+
+				cout << answer << "[ + ] Выбрать ответ:" << otvet;
+				cin >> otvet;
+
+				if (otvet == "D" or otvet == "d") {
+					chet++;
+					cout << endl << "Вы ответили правильно" << endl;
+				}
+				else {
+					live = live - 1;
+					cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+				}
+				otvet = "";
+
+				system("pause");
+				system("cls");
+
+				if (live == 0) {
+					system("cls");
+					cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+					system("pause");
+					system("cls");
+					break;
+				}
+
+				cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+				cout << quest << "[ 6 ] Вопрос: Вещественный тип данных объявляется служебным словом: " << endl << endl;
+				cout << "[ A ] INT" << "  [ B ] REAL" << endl << "[ C ] LONG" << " [ D ] Short" << endl << endl;
+
+				cout << answer << "[ + ] Выбрать ответ:" << otvet;
+				cin >> otvet;
+
+				if (otvet == "B" or otvet == "b") {
+					chet++;
+					cout << endl << "Вы ответили правильно" << endl;
+				}
+				else {
+					live = live - 1;
+					cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+				}
+				otvet = "";
+
+				system("pause");
+				system("cls");
+
+				if (live == 0) {
+					system("cls");
+					cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+					system("pause");
+					system("cls");
+					break;
+				}
+
+				cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+				cout << quest << "[ 7 ] Вопрос: Для вычисления квадратного корня применяется функция: " << endl << endl;
+				cout << "[ A ] SQRT(X)" << " [ B ] SQR(X)" << endl << "[ C ] ORD(X)" << "  [ D ] SQ(X)" << endl << endl;
+
+				cout << answer << "[ + ] Выбрать ответ:" << otvet;
+				cin >> otvet;
+
+				if (otvet == "A" or otvet == "a") {
+					chet++;
+					cout << endl << "Вы ответили правильно" << endl;
+				}
+				else {
+					live = live - 1;
+					cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+				}
+				otvet = "";
+
+				system("pause");
+				system("cls");
+
+				if (live == 0) {
+					system("cls");
+					cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+					system("pause");
+					system("cls");
+					break;
+				}
+
+				cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+				cout << quest << "[ 8 ] Вопрос: Для возведения в квадрат применяется функция: " << endl << endl;
+				cout << "[ A ] SQR(X)" << " [ B ] SQRT(X)" << endl << "[ C ] MIN(X)" << " [ D ] LOG(X)" << endl << endl;
+
+				cout << answer << "[ + ] Выбрать ответ:" << otvet;
+				cin >> otvet;
+
+				if (otvet == "A" or otvet == "a") {
+					chet++;
+					cout << endl << "Вы ответили правильно" << endl;
+				}
+				else {
+					live = live - 1;
+					cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+				}
+				otvet = "";
+
+				system("pause");
+				system("cls");
+
+				if (live == 0) {
+					system("cls");
+					cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+					system("pause");
+					system("cls");
+					break;
+				}
+				if (c == 8 and live > 0) {
+					cout << endl << "Ты победил, красавец)" << endl;
+					cout << "У тебя осталось " << live << " хп" << " Ты набрал " << chet << " очков" << endl;
+					system("pause");
+					system("cls");
+					break;
+				}
+				else if (c == 10) {
+
+					cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+					cout << quest << "[ 9 ] Вопрос: Символьный тип данных объявляется служебным словом: " << endl << endl;
+					cout << "[ A ] STRING" << " [ B ] WORD" << endl << "[ C ] CHAR" << "   [ D ] INT" << endl << endl;
+
+					cout << answer << "[ + ] Выбрать ответ:" << otvet;
+					cin >> otvet;
+
+					if (otvet == "C" or otvet == "c") {
+						chet++;
+						cout << endl << "Вы ответили правильно" << endl;
+					}
+					else {
+						live = live - 1;
+						cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+					}
+					otvet = "";
+
+					system("pause");
+					system("cls");
+
+					if (live == 0) {
+						system("cls");
+						cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+						system("pause");
+						system("cls");
+						break;
+					}
+
+					cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+					cout << quest << "[ 10 ] Вопрос: Записью действительного числа с плавающей точкой является: " << endl << endl;
+					cout << "[ A ] 48.0001" << " [ B ] 1.0E01" << endl << "[ C ] 322" << "     [ D ] –1.0533333" << endl << endl;
+
+					cout << answer << "[ + ] Выбрать ответ:" << otvet;
+					cin >> otvet;
+
+					if (otvet == "B" or otvet == "b") {
+						chet++;
+						cout << endl << "Вы ответили правильно" << endl;
+					}
+					else {
+						live = live - 1;
+						cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+					}
+					otvet = "";
+
+					system("pause");
+					system("cls");
+
+					if (live == 0) {
+						system("cls");
+						cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+						system("pause");
+						system("cls");
+						break;
+					}
+					if (live > 0) {
+						cout << endl << "Ты победил, красавец)" << endl;
+						cout << "У тебя осталось " << live << " хп" << " Ты набрал " << chet << " очков" << endl;
+						system("pause");
+						system("cls");
+						break;
+					}
+				}
+				else if (c == 12) {
+
+					cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+					cout << quest << "[ 9 ] Вопрос: Символьный тип данных объявляется служебным словом: " << endl << endl;
+					cout << "[ A ] STRING" << " [ B ] WORD" << endl << "[ C ] CHAR" << "   [ D ] INT" << endl << endl;
+
+					cout << answer << "[ + ] Выбрать ответ:" << otvet;
+					cin >> otvet;
+
+					if (otvet == "C" or otvet == "c") {
+						chet++;
+						cout << endl << "Вы ответили правильно" << endl;
+					}
+					else {
+						live = live - 1;
+						cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+					}
+					otvet = "";
+
+					system("pause");
+					system("cls");
+
+					if (live == 0) {
+						system("cls");
+						cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+						system("pause");
+						system("cls");
+						break;
+					}
+
+					cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+					cout << quest << "[ 10 ] Вопрос: Записью действительного числа с плавающей точкой является: " << endl << endl;
+					cout << "[ A ] 48.0001" << " [ B ] 1.0E01" << endl << "[ C ] 322" << "     [ D ] –1.0533333" << endl << endl;
+
+					cout << answer << "[ + ] Выбрать ответ:" << otvet;
+					cin >> otvet;
+
+					if (otvet == "B" or otvet == "b") {
+						chet++;
+						cout << endl << "Вы ответили правильно" << endl;
+					}
+					else {
+						live = live - 1;
+						cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+					}
+					otvet = "";
+
+					system("pause");
+					system("cls");
+
+					if (live == 0) {
+						system("cls");
+						cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+						system("pause");
+						system("cls");
+						break;
+					}
+
+					cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+					cout << quest << "[ 11 ] Вопрос: Определите, как называется процесс перестановки элементов массива с целью упорядочивания их в соответствии с каким-либо критерием? " << endl << endl;
+					cout << "[ A ] Поиск" << "   [ B ] Перебор" << endl << "[ C ] Разброс" << " [ D ] Сортировка" << endl << endl;
+
+					cout << answer << "[ + ] Выбрать ответ:" << otvet;
+					cin >> otvet;
+
+					if (otvet == "D" or otvet == "d") {
+						chet++;
+						cout << endl << "Вы ответили правильно" << endl;
+					}
+					else {
+						live = live - 1;
+						cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+					}
+					otvet = "";
+
+					system("pause");
+					system("cls");
+
+					if (live == 0) {
+						system("cls");
+						cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+						system("pause");
+						system("cls");
+						break;
+					}
+
+					cout << menu << "[ + ] Игрок: " << user << " | жизни: " << live << " | очки: " << chet << endl << endl;
+					cout << quest << "[ 12 ] Вопрос: Выясните, в основе какого метода сортировки лежит обмен соседних элементов массива? " << endl << endl;
+					cout << "[ A ] Прямой обмен" << "  [ B ] Прямой выбор" << endl << "[ C ] Прямой оборот" << " [ D ] Все варианты верны" << endl << endl;
+
+					cout << answer << "[ + ] Выбрать ответ:" << otvet;
+					cin >> otvet;
+
+					if (otvet == "A" or otvet == "a") {
+						chet++;
+						cout << endl << "Вы ответили правильно" << endl;
+					}
+					else {
+						live = live - 1;
+						cout << endl << "Вы ошиблись и потеряли одну жизнь" << endl;
+					}
+					otvet = "";
+
+					system("pause");
+					system("cls");
+
+					if (live == 0) {
+						system("cls");
+						cout << endl << menu << "Игра окончена вы проиграли :(" << endl << endl;
+						system("pause");
+						system("cls");
+						break;
+					}
+					if (live > 0) {
+						cout << endl << "Ты победил, красавец)" << endl;
+						cout << "У тебя осталось " << live << " хп" << " Ты набрал " << chet << " очков" << endl;
+						system("pause");
+						system("cls");
+					}
+				}
+			}
+		}
+		else if (key == 50) {
+
+		while (true){
+
+			cout << menu << endl << "1 Редактировать имя игрока " << endl;
+			cout << "2 Редактирование вопросов в игре " << endl;
+			cout << "3 Редактирование цвет интерфейса " << endl;
+			cout << "4 Вернуться в меню " << endl << endl;
+
+			int key2;
+			key2 = _getch();
+			system("cls");
+
+			if (key2 == 49) {
+
+				cout << endl << "Игрок: " << user << endl;
+				cout << "Введите новое имя игрока: " << endl;
+				cin >> user;
+				cout << "Игрок: " << user << endl << endl;
+
+				system("pause");
+				system("cls");
+
+			}
+			else if (key2 == 50) {
+
+
+				cout << endl << "Можно изменить на 8 - 10 - 12" << endl << "Напишите сколько вопросов хотите: ";
+				cin >> c;
+				if (c == 8 or c == 12 or c == 10) {
+					cout << "Вы установили кол-во вопросов равное: " << c << endl << endl;
+					system("pause");
+					system("cls");
+				}
+				else {
+
+					c = 8;
+					cout << "Ошибка, параметр не сохранен" << endl << endl;
+
+					system("pause");
+					system("cls");
+				}
+			}
+			else if (key2 == 51) {
+				int key3;
+				const string C_GREEN = "\x1b[92m";
+				const string C_RED = "\x1b[91m";
+				const string C_WHITE = "\x1b[97m";
+				const string C_BLUE = "\x1b[94m";
+
+
+
+				cout << "Выберите какому объекту хотите поменять цвет " << endl << endl;
+
+				cout << "1 Вопросы" << endl;
+				cout << "2 Меню" << endl;
+				cout << "3 Ответы" << endl << endl;
+
+
+				key3 = _getch();
+
+				cout << endl << "Выберите цвет " << endl << endl;
+
+				cout << "1 Красный " << endl;
+				cout << "2 Белый" << endl;
+				cout << "3 Зелёный" << endl;
+				cout << "4 Синий" << endl << endl;
+
+				int key4;
+				key4 = _getch();
+
+				if (key3 == 49) {
+					if (key4 == 49) {
+						quest = C_RED;
+						system("cls");
+					}
+					else if (key4 == 50) {
+						quest = C_WHITE;
+						system("cls");
+					}
+					else if (key4 == 51) {
+						quest = C_GREEN;
+						system("cls");
+					}
+					else if (key4 == 52) {
+						quest = C_BLUE;
+						system("cls");
+					}
+				}
+				else if (key3 == 50) {
+					if (key4 == 49) {
+						menu = C_RED;
+						system("cls");
+					}
+					else if (key4 == 50) {
+						menu = C_WHITE;
+						system("cls");
+					}
+					else if (key4 == 51) {
+						menu = C_GREEN;
+						system("cls");
+					}
+					else if (key4 == 52) {
+						menu = C_BLUE;
+						system("cls");
+					}
+				}
+				else if (key3 == 51) {
+					if (key4 == 49) {
+						answer = C_RED;
+						system("cls");
+					}
+					else if (key4 == 50) {
+						answer = C_WHITE;
+						system("cls");
+					}
+					else if (key4 == 51) {
+						answer = C_GREEN;
+						system("cls");
+					}
+					else if (key4 == 52) {
+						answer = C_BLUE;
+						system("cls");
+					}
+				}
+				system("cls");
+			}
+			else if (key2 == 52) {
+				cout << endl;
+				system("cls");
+				break;
+			}
+		}
+		}
+		else if (key == 51) {
+
+			cout << endl << "Игрок получает очки за правильный ответ на вопрос" << endl;
+			cout << "Игрок проходит дальше за правильный ответ" << endl;
+			cout << "Игрок теряет жизнь при неправильном ответе" << endl << endl;
+
+			system("pause");
+			system("cls");
+
+		}
+		else if (key == 52) {
+			system("cls");
+			return 0;
+
+		}
+	}
+	int _;
+	cin >> _;
+
+	return 0;
+}

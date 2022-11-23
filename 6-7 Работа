@@ -1,0 +1,169 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	 
+	setlocale(0, "");
+	int key;
+	int key2;
+	string m;
+	cout << "[ + ] Месяца года  \n \n" << "[ 1 ] Январь \n" << "[ 2 ] Февраль \n" << "[ 3 ] Март \n" << "[ 4 ] Апрель \n"
+		<< "[ 5 ] Май \n" << "[ 6 ] Июнь \n" << "[ 7 ] Июль \n" << "[ 8 ] Август \n" << "[ 9 ] Сентябрь \n" 
+		<< "[ 10 ] Октябрь \n" << "[ 11 ] Ноябрь \n" << "[ 12 ] Декабрь \n \n";
+	cout << "[ + ] Выберите месяц: ";
+	cin >> key;
+	cout << "[ + ] Выберите день: ";
+	cin >> key2;
+	switch (key)
+	{
+	case 1:
+		cout << "\n[ + ] Выбран месяц: Январь \n";
+		m = "Января";
+		break;
+	case 2:
+		cout << "\n[ + ] Выбран месяц: Февраль \n";
+		m = "Февраля";
+		break;
+	case 3:
+		cout << "\n[ + ] Выбран месяц: Март \n";
+		m = "Марта";
+		break;
+	case 4:
+		cout << "\n[ + ] Выбран месяц: Апрель \n";
+		m = " Апреля";
+		break;
+	case 5:
+		cout << "\n[ + ] Выбран месяц: Май \n";
+		m = "Мая";
+		break;
+	case 6:
+		cout << "\n[ + ] Выбран месяц: Июнь \n";
+		m = "Июня";
+		break;
+	case 7:
+		cout << "\n[ + ] Выбран месяц: Июль \n";
+		m = "Июля";
+		break;
+	case 8:
+		cout << "\n[ + ] Выбран месяц: Август \n";
+		m = "Августа";
+		break;
+	case 9:
+		cout << "\n[ + ] Выбран месяц: Сентябрь \n";
+		m = "Сентября";
+		break;
+	case 10:
+		cout << "\n[ + ] Выбран месяц: Октябрь \n";
+		m = "Октября";
+		break;
+	case 11:
+		cout << "\n[ + ] Выбран месяц: Ноябрь \n";
+		m = "Ноября";
+		break;
+	case 12:
+		cout << "\n[ + ] Выбран месяц: Декабрь \n";
+		m = "Декабря";
+		break;
+	default:
+		cout << "\nНе правильно введен номер месяца! \n";
+		break;
+	}
+	switch (key2)
+	{
+	case 1:
+		cout << "\nКалендарь: 1 " << m << " \n";
+		break;
+	case 2:
+		cout << "\nКалендарь: 2 " << m << " \n";
+		break;
+	case 3:
+		cout << "\nКалендарь: 3 " << m << " \n";
+		break;
+	case 4:
+		cout << "\nКалендарь: 4 " << m << " \n";
+		break;
+	case 5:
+		cout << "\nКалендарь: 5 " << m << " \n";
+		break;
+	case 6:
+		cout << "\nКалендарь: 6 " << m << " \n";
+		break;
+	case 7:
+		cout << "\nКалендарь: 7 " << m << " \n";
+		break;
+	case 8:
+		cout << "\nКалендарь: 8 " << m << " \n";
+	case 9:
+		cout << "\nКалендарь: 9 " << m << " \n";
+	case 10:
+		cout << "\nКалендарь: 10 " << m << " \n";
+		break;
+	case 11:
+		cout << "\nКалендарь: 11 " << m << " \n";
+	case 12:
+		cout << "\nКалендарь: 12 " << m << " \n";
+		break;
+	case 13:
+		cout << "\nКалендарь: 13 " << m << " \n";
+		break;
+	case 14:
+		cout << "\nКалендарь: 14 " << m << " \n";
+	case 15:
+		cout << "\nКалендарь: 15 " << m << " \n";
+	case 16:
+		cout << "\nКалендарь: 16 " << m << " \n";
+		break;
+	case 17:
+		cout << "\nКалендарь: 17 " << m << " \n";
+		break;
+	case 18:
+		cout << "\nКалендарь: 18 " << m << " \n";
+		break;
+	case 19:
+		cout << "\nКалендарь: 19 " << m << " \n";
+	case 20:
+		cout << "\nКалендарь: 20 " << m << " \n";
+		break;
+	case 21:
+		cout << "\nКалендарь: 21 " << m << " \n";
+		break;
+	case 22:
+		cout << "\nКалендарь: 22 " << m << " \n";
+		break;
+	case 23:
+		cout << "\nКалендарь: 23 " << m << " \n";
+		break;
+	case 24:
+		cout << "\nКалендарь: 24 " << m << " \n";
+		break;
+	case 25:
+		cout << "\nКалендарь: 25 " << m << " \n";
+		break;
+	case 26:
+		cout << "\nКалендарь: 26 " << m << " \n";
+		break;
+	case 27:
+		cout << "\nКалендарь: 27 " << m << " \n";
+		break;
+	case 28:
+		cout << "\nКалендарь: 28 " << m << " \n";
+		break;
+	case 29:
+		cout << "\nКалендарь: 29 " << m << " \n";
+		break;
+	case 30:
+		if (m == "Февраля") { return 0; }
+		cout << "\nКалендарь: 30 " << m << " \n";
+		break;
+	case 31:
+		if (m == "Февраля" or m == "Апреля" or m == "Июня" or m == "Сентября" or m == "Ноября") { return 0; }
+		cout << "\nКалендарь: 31 " << m << " \n";
+		break;
+	default:
+		cout << "\nНеверно указано кол-во дней в месяце \n";
+		break;
+	
+	}
+	system("pause");
+	return 0;
+}

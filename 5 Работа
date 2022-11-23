@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(0, "");
+	float a;
+	float b;
+	char z;
+	cout << "Введите первое число: " << endl;
+	cin >> a;
+	cout << "Введите знак: " << endl;
+	cin >> z ;
+	cout << "Введите  второе число: " << endl;
+	cin >> b;
+	if (a == -0) {
+		a = 0;
+	}
+	if (b == -0) {
+		b = 0;
+	}
+	if (z == '+') {
+		cout << "Результат: " << a + b;
+	}
+	else if (z == '/') {
+		if (b == 0) {
+			cout << "На ноль делить нельзя";
+		}
+		else {
+			cout << "Результат: " << a / b;
+		}
+	}
+	else if (z == '-') {
+		cout << "Результат: " << a - b;
+	}
+	else if (z == '*') {
+		cout << "Результат: " << a * b;
+	}
+	else if (z == '%') {
+		cout << "Результат: " << int(a)  %  int(b);
+	}
+	else {
+		cout << "Такого знака нет";
+	}
+
+
+
+	int _;
+	cin >> _;
+
+}

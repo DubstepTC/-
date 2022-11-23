@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+	
+	int arrInt[10] = { 1, 20, 32, 4, 1, 2, 2, 54, 23, 0 };
+	cout << "Массив int:\n";
+	for (int i = 0; i < 10; i++) {
+		cout << arrInt[i] << "\n";
+	}
+	system("pause");
+	system("cls");
+	
+	short arrShort[10] = { 124, 20, 3265, -4, 567, 2, 678, 54, 679,-6785 };
+	cout << "Массив short:\n";
+	for (int i = 0; i < 10; i++) {
+		cout << arrShort[i] << "\n";
+	}
+	system("pause");
+	system("cls");
+	
+	long arrLong[10] = { 1457, 20, 32, 4, 5681, 2890, 2, 54, 23, 9872};
+	cout << "Массив long:\n";
+	for (int i = 0; i < 10; i++) {
+		cout << arrLong[i] << "\n";
+	}
+	system("pause");
+	system("cls");
+	
+	float arrFloat[10] = { 1.0, 1.7895, 2.0, 2.9805, 3.0, 3.5, 4.0, 4.2345, 58.0, 557.5 };
+	cout << "Массив float:\n";
+	for (int i = 0; i < 10; i++) {
+		cout << arrFloat[i] << "\n";
+	}
+	system("pause");
+	system("cls");
+	
+	double arrDouble[10] = { 1.0436, 1.5, 2.0, 2.5546, 3.0, 3.5, 4.6780, 4.5, 5.0678, 5.5 };
+	cout << "Массив double:\n";
+	for (int i = 0; i < 10; i++) {
+		cout << arrDouble[i] << "\n";
+	}
+	system("pause");
+	system("cls");
+	
+	char arrChar[10] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'k', 'l' };
+	cout << "Массив char:\n";
+	for (int i = 0; i < 10; i++) {
+		cout << arrChar[i] << "\n";
+	}
+	system("pause");
+	system("cls");
+
+	bool arrBool[10] = { 1, true, 0, false, 321, true, 0, 0, 10, -1 };
+	cout << "Массив bool:\n";
+	for (int i = 0; i < 10; i++) {
+		cout << arrBool[i] << "\n";
+	}
+	system("pause");
+	system("cls");
+
+	string arrString[10] = { "Dima", "Home", "Start", "Fear is the mind killer", "Street", "Fancy", "CoolCola", "Dobriy", "Nuts", "Mars"};
+	cout << "Массив string:\n";
+	for (int i = 0; i < 10; i++) {
+		cout << arrString[i] << "\n";
+	}
+	system("pause");
+	
+	return 0;
+}

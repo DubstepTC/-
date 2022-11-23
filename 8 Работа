@@ -1,0 +1,130 @@
+#include <iostream>
+using namespace std;
+#include <conio.h>
+
+int main() {
+
+	setlocale(0, "");
+	int key;
+	int key2;
+	while (true) {
+		cout << "[ + ] Переводчик  \n \n" << "[ 1 ] Русские слова \n" << "[ 2 ] Английские слова \n\n" << "[ 3 ] Выйти \n";
+		key = _getch();
+		system("cls");
+		if (key == 49) {
+			cout << "[ + ] Переводчик 'Список русских слов'\n\n[ 1 ]Дом\n[ 2 ]Дорога\n[ 3 ]Город\n[ 4 ]Кошка\n[ 5 ]Окно\n[ 6 ]Таблица\n[ 7 ]Солнце\n[ 8 ]Улица\n[ 9 ]Человек\n[ 10 ]Собака\n[ 11 ]Мама\n[ 12 ]Папа\n[ 13 ]Мозг\n[ 14 ]Нос\n[ 15 ]Рот";
+			cout << "\n\nВыберите номер слова: ";
+			cin >> key2;
+			switch (key2) {
+			case 1:
+				cout << "Перевод : дoм -> home\n";
+				break;
+			case 2:
+				cout << "Перевод : дорога -> road\n";
+				break;
+			case 3:
+				cout << "Перевод : город -> city\n";
+				break;
+			case 4:
+				cout << "Перевод : кошка -> cat\n";
+				break;
+			case 5:
+				cout << "Перевод : окно -> window\n";
+				break;
+			case 6:
+				cout << "Перевод : таблица -> table\n ";
+				break;
+			case 7:
+				cout << "Перевод : солнце -> sun\n";
+				break;
+			case 8:
+				cout << "Перевод : улица -> street\n ";
+				break;
+			case 9:
+				cout << "Перевод : человек -> human\n ";
+				break;
+			case 10:
+				cout << "Перевод : собака -> dog\n";
+				break;
+			case 11:
+				cout << "Перевод : мама -> mother\n";
+				break;
+			case 12:
+				cout << "Перевод : папа -> father\n";
+				break;
+			case 13:
+				cout << "Перевод : мозг -> brain\n";
+				break;
+			case 14:
+				cout << "Перевод : нос -> nose\n";
+				break;
+			case 15:
+				cout << "Перевод : рот -> mouth\n";
+				break;
+			}
+			system("pause");
+			system("cls");
+		}
+		else if (key == 50) {
+			cout << "[ + ] Переводчик 'Список английских слов'\n\n[ 1 ]Onion\n[ 2 ]Carrot\n[ 3 ]Tomato\n[ 4 ]Cucumber\n[ 5 ]Apple\n[ 6 ]Grape\n[ 7 ]Pear\n[ 8 ]Bus\n[ 9 ]Soap\n[ 10 ]Egg\n[ 11 ]Fox\n[ 12 ]Bear\n[ 13 ]Wolf\n[ 14 ]Knife\n[ 15 ]Cup";
+			cout << "\n\nВыберите номер слова: ";
+			cin >> key2;
+			switch (key2) {
+			case 1:
+				cout << "Перевод : Onion -> лук\n";
+				break;
+			case 2:
+				cout << "Перевод : Carrot -> морковь\n";
+				break;
+			case 3:
+				cout << "Перевод : Tomato -> помидор\n";
+				break;
+			case 4:
+				cout << "Перевод : Cucumber -> огурец\n";
+				break;
+			case 5:
+				cout << "Перевод : Apple -> яблоко\n";
+				break;
+			case 6:
+				cout << "Перевод : Grape -> виноград\n ";
+				break;
+			case 7:
+				cout << "Перевод : Pear -> персик\n";
+				break;
+			case 8:
+				cout << "Перевод : Bus -> автобус\n ";
+				break;
+			case 9:
+				cout << "Перевод : Soap -> мыло\n ";
+				break;
+			case 10:
+				cout << "Перевод : Egg -> яйцо\n";
+				break;
+			case 11:
+				cout << "Перевод : Fox -> лиса\n";
+				break;
+			case 12:
+				cout << "Перевод : Bear -> медведь\n";
+				break;
+			case 13:
+				cout << "Перевод : Wolf -> волк\n";
+				break;
+			case 14:
+				cout << "Перевод : Knife -> нож\n";
+				break;
+			case 15:
+				cout << "Перевод : Cup -> чашка\n";
+				break;
+			}
+
+
+			system("pause");
+			system("cls");
+		}
+		else if (key == 51) {
+			return 0;
+		}
+	}
+		system("pause");
+		return 0;
+	}

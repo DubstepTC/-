@@ -1,0 +1,196 @@
+#include <iostream>
+#include <conio.h>
+#include <windows.h> 
+#include <iomanip>
+using namespace std;
+
+int main() {
+	setlocale(0, "");
+	int key;
+	int ar[7];
+	int a, b;
+	const string C_BLUE = "\x1b[94m";
+	const string C_WHITE = "\x1b[97m";
+	const string C_GREEN = "\x1b[92m";
+
+	cout << "\tЗдравствуйте пользователь\n\nПроинициализируйте целочисленный массив на 7 элементов:\n\n";
+	for (int i = 0; i < 7; i++) {
+		cout << "[ + ] Инициализация | ячейка " << i << ": ";
+		cin >> ar[i];
+	}
+	cout << "\nВ массив были записаны такие значения:";
+	for (int i = 0; i < 7; i++) {
+		Sleep(500);
+		cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+	}
+	cout << "\n\nБольшое спасибо за выполнение условия. Ты мега крут!\n\n";
+	system("pause");
+
+	while (true) {
+		system("cls");
+		bool swapped = false;
+
+		cout << C_BLUE << "[+] Настройки массива :\n\n" << C_WHITE;
+		cout << "[1] Сортировка по возрастанию\n";
+		cout << "[2] Сортировка по убыванию\n";
+		cout << "[3] Перемножить массив\n";
+		cout << "[4] Сложить массив\n";
+		cout << "[5] Разделить массив\n";
+		cout << "[6] Обнулить массив\n\n";
+		cout << "[8] Задать новые значения массиву\n";
+		cout << "[9] Выход из программы\n";
+
+		key = _getch();
+
+		if (key == 49) {
+			system("cls");
+			cout << "Вы выбрали пункт сортировки массива по возрастанию\n\n";
+			for (int i = 0; i < 7; i++) {
+				for (int i = 0; i < 6; i++)
+					if (ar[i] > ar[i + 1]) {
+						swap(ar[i], ar[i + 1]);
+						swapped = true;
+					}
+			}
+			cout << "Теперь массив выглядит так";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+			}
+			cout << "\n";
+			system("pause");
+		}
+		else if (key == 50) {
+			system("cls");
+			cout << "Вы выбрали пункт сортировки массива по убыванию\n\n";
+			for (int i = 0; i < 7; i++) {
+				for (int i = 0; i < 7; i++)
+					if (ar[i] < ar[i + 1]) {
+						b = ar[i];
+						ar[i] = ar[i + 1];
+						ar[i + 1] = b;
+						b = 0;
+					}
+			}
+			cout << "Теперь массив выглядит так";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+			}
+			cout << "\n";
+			system("pause");
+		}
+		else if (key == 51) {
+			system("cls");
+			cout << "Введите число, на которое хотите умножить элементы массива\n\n";
+			cin >> a;
+			cout << "Массив состоял из таких чисел:";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+			}
+			cout << "\nВыполнение умножения массива ...\n";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << left << setw(5) << ar[i] << " * " << a << " = " << ar[i] * a << "\n";
+				ar[i] = ar[i] * a;
+			}
+			cout << "Теперь массив состоит из этих чисел:";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+			}
+			cout << "\n";
+			system("pause");
+
+		}
+		else if (key == 52) {
+			system("cls");
+			cout << "Введите число, которое хотите прибавить к элементам массива\n\n";
+			cin >> a;
+			cout << "Массив состоял из таких чисел:";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+			}
+			cout << "\nВыполнение сложения массива ...\n";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << left << setw(5) << ar[i] << " + " << a << " = " << ar[i] + a << "\n";
+				ar[i] = ar[i] + a;
+			}
+			cout << "Теперь массив состоит из этих чисел:";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+			}
+			cout << "\n";
+			system("pause");
+
+		}
+		else if (key == 53) {
+			system("cls");
+			cout << "Введите число, на которое хотите разделить элементы массива\n\n";
+			cin >> a;
+			cout << "Массив состоял из таких чисел:";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+			}
+			cout << "\nВыполнение деления массива ...\n";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << left << setw(5) << ar[i] << " / " << a << " = " << ar[i] / a << "\n";
+				ar[i] = ar[i] / a;
+			}
+			cout << "Теперь массив состоит из этих чисел:";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+			}
+			cout << "\n";
+			system("pause");
+
+		}
+		else if (key == 54) {
+			system("cls");
+			cout << "Вы выбрали пункт обнуления массива\n\n";
+			for (int i = 0; i < 7; i++) {
+				ar[i] = 0;
+			}
+			cout << "Массив обнулён и выглядит так:";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+			}
+			cout << "\n\nВы можите снова добавить значения в массив выбрав соответствующий пункт\n\n";
+			system("pause");
+		}
+		else if (key == 56) {
+			system("cls");
+
+			cout << "\nПроинициализируйте целочисленный массив на 7 элементов:\n\n";
+			for (int i = 0; i < 7; i++) {
+				cout << "[ + ] Инициализация | ячейка " << i << ": ";
+				cin >> ar[i];
+			}
+			cout << "\nВ массив были записаны такие значения:";
+			for (int i = 0; i < 7; i++) {
+				Sleep(500);
+				cout << " " << C_GREEN << ar[i] << C_WHITE << " ";
+			}
+			cout << "\n\nБольшое спасибо за выполнение условия. Ты мега крут!\n\n";
+			system("pause");
+		}
+		else if (key == 57) {
+			system("cls");
+			return 0;
+		}
+
+
+		system("cls");
+
+	}
+
+	return 0;
+}
